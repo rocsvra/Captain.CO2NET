@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Captain.CO2NET", "Captain.CO2NET\Captain.CO2NET.csproj", "{53B8C17E-6C3E-4B33-A47F-F607816107AB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraires", "Libraires", "{20AC299C-BF2F-4CD2-9AE1-C3DD408B9B50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{44A773DC-1546-472B-A8B0-3B2288589C22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,8 +23,11 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53B8C17E-6C3E-4B33-A47F-F607816107AB} = {20AC299C-BF2F-4CD2-9AE1-C3DD408B9B50}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		VisualSVNWorkingCopyRoot = ..
 		SolutionGuid = {494583CE-2537-4BD6-A775-B8809F352871}
+		VisualSVNWorkingCopyRoot = ..
 	EndGlobalSection
 EndGlobal
