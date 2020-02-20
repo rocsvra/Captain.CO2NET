@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>支持.net core的公共基础扩展库</Description>
+    <Authors>roc</Authors>
+    <PackageProjectUrl>https://github.com/rocsvra/Captain.CO2NET</PackageProjectUrl>
+    <PackageTags>Captain,CO2NET</PackageTags>
+    <NeutralLanguage>.Net Standard</NeutralLanguage>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -11,5 +16,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>D:\Roc.Github\Captain.CO2NET\src\Captain.CO2NET\Captain.CO2NET.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Captain.CO2NET.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Captain.CO2NET.xml" />
+  </ItemGroup>
 
 </Project>

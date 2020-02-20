@@ -8,3 +8,5 @@
 /src/Captain.CO2NET/bin/Debug/netstandard2.0
 /src/Captain.CO2NET.Api/bin/Debug/netstandard2.0
 /src/Captain.CO2NET.Api/obj
+/src/Captain.CO2NET/bin
+/src/Captain.CO2NET/Properties/PublishProfiles
