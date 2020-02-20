@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraires", "Libraires", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{44A773DC-1546-472B-A8B0-3B2288589C22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Captain.CO2NET.Api", "Captain.CO2NET.Api\Captain.CO2NET.Api.csproj", "{2205E7DE-0971-4638-899C-E25FD85458A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Captain.CO2NET.Api", "Captain.CO2NET.Api\Captain.CO2NET.Api.csproj", "{2205E7DE-0971-4638-899C-E25FD85458A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Captain.CO2NET.Json", "Captain.CO2NET.Json\Captain.CO2NET.Json.csproj", "{50270660-E029-44C2-99D3-D67CAEA1970C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{2205E7DE-0971-4638-899C-E25FD85458A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2205E7DE-0971-4638-899C-E25FD85458A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2205E7DE-0971-4638-899C-E25FD85458A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50270660-E029-44C2-99D3-D67CAEA1970C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50270660-E029-44C2-99D3-D67CAEA1970C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50270660-E029-44C2-99D3-D67CAEA1970C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50270660-E029-44C2-99D3-D67CAEA1970C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,9 +38,10 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{53B8C17E-6C3E-4B33-A47F-F607816107AB} = {20AC299C-BF2F-4CD2-9AE1-C3DD408B9B50}
 		{2205E7DE-0971-4638-899C-E25FD85458A6} = {20AC299C-BF2F-4CD2-9AE1-C3DD408B9B50}
+		{50270660-E029-44C2-99D3-D67CAEA1970C} = {20AC299C-BF2F-4CD2-9AE1-C3DD408B9B50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		VisualSVNWorkingCopyRoot = ..
 		SolutionGuid = {494583CE-2537-4BD6-A775-B8809F352871}
+		VisualSVNWorkingCopyRoot = ..
 	EndGlobalSection
 EndGlobal

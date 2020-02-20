@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>roc</Authors>
+    <Company>roc</Company>
+    <Description>基于Newtonsoft.Json的扩展</Description>
+    <PackageProjectUrl>https://github.com/rocsvra/Captain.CO2NET</PackageProjectUrl>
+    <PackageTags>Captain,CO2NET,Json</PackageTags>
+    <NeutralLanguage>.Net Standard</NeutralLanguage>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Roc.GitHub\Captain.CO2NET\src\Captain.CO2NET.Json\Captain.CO2NET.Json.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Roc.GitHub\Captain.CO2NET\src\Captain.CO2NET.Json\Captain.CO2NET.Json.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

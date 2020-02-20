@@ -2,6 +2,9 @@
 
 namespace Captain.CO2NET.Helpers
 {
+    /// <summary>
+    /// 文件
+    /// </summary>
     public class FileHelper
     {
         /// <summary>
