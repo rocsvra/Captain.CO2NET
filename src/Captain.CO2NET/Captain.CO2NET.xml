@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Captain.CO2NET</name>
+    </assembly>
+    <members>
+        <member name="T:Captain.CO2NET.Extensions.Ext4DataTable">
+            <summary>
+            List、IEnumerable和DataTable之间的转化
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Extensions.Ext4DataTable.ToDataTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Convert a List{T} to a DataTable.
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Extensions.Ext4DataTable.ToDataTable``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Convert a IEnumerable{T} to a DataTable.
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Extensions.Ext4DataTable.IsNullable(System.Type)">
+            <summary>
+            Determine of specified type is nullable
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Extensions.Ext4DataTable.GetCoreType(System.Type)">
+            <summary>
+            Return underlying type if type is Nullable otherwise return the type
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Extensions.Ext4DataTable.ConvertTo``1(System.Data.DataTable)">
+            <summary>
+            DataTable转化成List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Captain.CO2NET.Extensions.Ext4Enum">
+            <summary>
+            枚举扩展
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Extensions.Ext4Enum.GetEnumDescription``1(``0)">
+            <summary>
+            获取枚举描述
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.CO2NET.Extensions.Ext4Enum.GetEnumName``1(``0)">
+            <summary>
+            获取枚举名称
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Captain.CO2NET.Helpers.IdentityCardHelper">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.IdentityCardHelper.GetBirthday(System.String)">
+            <summary>
+            获取生日
+            身份证号错误，返回null
+            </summary>
+            <param name="idcard"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.IdentityCardHelper.GetAge(System.String)">
+            <summary>
+            获取年龄
+            </summary>
+            <param name="idcard"></param>        
+            <returns></returns>
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.IdentityCardHelper.GetSex(System.String)">
+            <summary>
+            获取性别 
+            男：1 女：0 未知：2
+            </summary>
+            <param name="idcard"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Captain.CO2NET.Helpers.RandomCodeHelper">
+            <summary>
+            随机码生成类
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.RandomCodeHelper.GenerateCode(System.Int32)">
+            <summary>
+            获取由字母与数字组成的、指定位数随机码
+            </summary>
+            <param name="length">随机码位数</param>
+            <returns>返回随机码</returns>
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.RandomCodeHelper.GenerateDigitCode(System.Int32)">
+            <summary>
+            获取由仅由数字组成的、指定位数随机码
+            </summary>
+            <param name="length">随机码位数</param>
+            <returns>返回随机码</returns>
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.RandomCodeHelper.GenerateStringID">
+            <summary>
+            根据GUID获取16位的唯一字符串  
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.RandomCodeHelper.GenerateLongID">
+            <summary>
+            根据GUID获取19位的唯一数字序列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Captain.CO2NET.Helpers.TimeStampHelper">
+            <summary>
+            时间戳转换帮助类
+            </summary>
+        </member>
+        <member name="F:Captain.CO2NET.Helpers.TimeStampHelper.BaseTime">
+            <summary>
+            Unix起始时间
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.TimeStampHelper.GetTimeStamp">
+            <summary>  
+            获取Unix时间戳（秒）
+            Unix时间戳：从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒
+            </summary>  
+            <returns>long </returns>  
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.TimeStampHelper.GetTimeStamp(System.DateTime)">
+            <summary>  
+            获取Unix时间戳（秒）
+            Unix时间戳：从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒
+            </summary>  
+            <param name="dateTime"></param>  
+            <returns>long </returns>  
+        </member>
+        <member name="M:Captain.CO2NET.Helpers.TimeStampHelper.GetDateTime(System.Int64)">
+            <summary>        
+            时间戳转DateTime  
+            </summary>        
+            <param name="timeStamp">Unix时间戳（秒）</param>        
+            <returns></returns>        
+        </member>
+        <member name="T:Captain.CO2NET.Models.PageModel`1">
+            <summary>
+            分页数据
+            </summary>
+        </member>
+        <member name="P:Captain.CO2NET.Models.PageModel`1.Offset">
+            <summary>
+            当前页偏移量
+            </summary>
+        </member>
+        <member name="P:Captain.CO2NET.Models.PageModel`1.Total">
+            <summary>
+            数据总量
+            </summary>
+        </member>
+        <member name="P:Captain.CO2NET.Models.PageModel`1.Items">
+            <summary>
+            数据集合
+            </summary>
+        </member>
+    </members>
+</doc>
