@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Captain.CO2NET.Json</name>
+    </assembly>
+    <members>
+        <member name="T:Captain.CO2NET.Json.Ext4Json">
+            <summary>
+            JsonSerializer
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.Json.Ext4Json.JsonSerialize(System.Object)">
+            <summary>
+            序列化为json字符串
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.CO2NET.Json.Ext4Json.JsonSerialize(System.Object,System.String)">
+            <summary>
+            序列化为json字符串
+            </summary>
+            <param name="source"></param>
+            <param name="dateTimeFormats">exp:"yyyy-MM-dd HH:mm:ss" </param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.CO2NET.Json.Ext4Json.JsonDeserialize``1(System.String)">
+            <summary>
+            反序列化为对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.CO2NET.Json.Ext4Json.ToJObject(System.String)">
+            <summary>
+            转化为JObject对象
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

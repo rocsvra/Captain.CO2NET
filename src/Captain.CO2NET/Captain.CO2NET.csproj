@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\Roc.Github\Captain.CO2NET\src\Captain.CO2NET\Captain.CO2NET.xml</DocumentationFile>
+    <DocumentationFile>E:\Roc.GitHub\Captain.CO2NET\src\Captain.CO2NET\Captain.CO2NET.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
