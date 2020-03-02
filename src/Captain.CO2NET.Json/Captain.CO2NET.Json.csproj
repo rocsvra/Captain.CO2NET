@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>D:\Roc.GitHub\Captain.CO2NET\src\Captain.CO2NET.Json\Captain.CO2NET.Json.xml</DocumentationFile>
+    <DocumentationFile>E:\Roc.GitHub\Captain.CO2NET\src\Captain.CO2NET.Json\Captain.CO2NET.Json.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
