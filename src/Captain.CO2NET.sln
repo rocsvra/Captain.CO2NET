@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Captain.DB2NET.NPoco4SqlSer
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FA1654D9-FC7C-4E3A-A5C8-E369BABCA726}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Captain.CO2NET.HttpException", "Captain.CO2NET.HttpException\Captain.CO2NET.HttpException.csproj", "{0C49D297-C9D5-40A9-A4BE-B07AEC38A6D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{77C58658-6245-449C-B380-403CCA19886E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77C58658-6245-449C-B380-403CCA19886E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77C58658-6245-449C-B380-403CCA19886E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C49D297-C9D5-40A9-A4BE-B07AEC38A6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C49D297-C9D5-40A9-A4BE-B07AEC38A6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C49D297-C9D5-40A9-A4BE-B07AEC38A6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C49D297-C9D5-40A9-A4BE-B07AEC38A6D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,9 +96,10 @@ Global
 		{414B0FC2-C389-4017-ACD1-1FCB816D15D1} = {FA1654D9-FC7C-4E3A-A5C8-E369BABCA726}
 		{77C58658-6245-449C-B380-403CCA19886E} = {CA4E706F-5FDB-4FE5-ACBE-19F37E844257}
 		{FA1654D9-FC7C-4E3A-A5C8-E369BABCA726} = {CA4E706F-5FDB-4FE5-ACBE-19F37E844257}
+		{0C49D297-C9D5-40A9-A4BE-B07AEC38A6D1} = {F12CA22C-6F06-41BC-8BC8-018F7E47BE8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {494583CE-2537-4BD6-A775-B8809F352871}
 		VisualSVNWorkingCopyRoot = ..
+		SolutionGuid = {494583CE-2537-4BD6-A775-B8809F352871}
 	EndGlobalSection
 EndGlobal
