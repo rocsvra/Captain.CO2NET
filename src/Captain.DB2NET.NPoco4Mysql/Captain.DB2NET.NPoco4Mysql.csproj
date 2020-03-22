@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>roc</Authors>
+    <Company>roc</Company>
+    <Product>Captain.DB2NET.NPoco4Mysql</Product>
+    <Description>基于NPoco的数据库操作类，数据库类型：Mysql</Description>
+    <PackageProjectUrl>https://github.com/rocsvra/Captain.DB2NET</PackageProjectUrl>
+    <PackageTags>DB2NET,NPoco</PackageTags>
+    <NeutralLanguage>.Net Standard</NeutralLanguage>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Roc.GitHub\Captain.DB2NET\src\Captain.DB2NET.NPoco4Mysql\Captain.DB2NET.NPoco4Mysql.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Roc.GitHub\Captain.DB2NET\src\Captain.DB2NET.NPoco4Mysql\Captain.DB2NET.NPoco4Mysql.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Captain.DB2NET.NPoco4Mysql.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Captain.DB2NET.NPoco4Mysql.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Captain.DB2NET.NPoco" Version="1.0.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.19" />
+  </ItemGroup>
+
+</Project>
