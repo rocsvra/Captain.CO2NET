@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Captain.DB2NET.NPoco4Mysql</name>
+    </assembly>
+    <members>
+        <member name="M:Captain.DB2NET.NPoco4Mysql.MySqlDb.GetConnection(System.String)">
+            <summary>
+            获取数据库连接
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco4Mysql.MySqlDb.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connectionString">数据库连接串</param>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco4Mysql.MySqlDb.ExecProcedure(System.String,MySql.Data.MySqlClient.MySqlParameter[])">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

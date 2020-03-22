@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Captain.DB2NET.NPoco</name>
+    </assembly>
+    <members>
+        <member name="T:Captain.DB2NET.NPoco.Db">
+            <summary>
+            NonQuery
+            </summary>
+            <summary>
+            Query
+            </summary>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Execute(System.String,System.Object[])">
+            <summary>
+            执行sql
+            </summary>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.ExcuteBatch(System.Collections.Generic.List{System.String})">
+            <summary>
+            批量执行sql
+            </summary>
+            <param name="sqls"></param>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Insert``1(``0)">
+            <summary>
+            插入数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.InsertBulk``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            巨量插入
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pocos"></param>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Update(System.Object)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Delete(System.Object)">
+            <summary>
+            删除
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Delete``1(System.Object)">
+            <summary>
+            删除
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pocoOrPrimaryKey">实体或主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.#ctor(System.Data.Common.DbConnection)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.SingleOrDefault``1(System.String,System.Object[])">
+            <summary>
+            查询单条数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.SingleOrDefaultById``1(System.Object)">
+            <summary>
+            查询单条数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="primaryKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.First``1(System.String,System.Object[])">
+            <summary>
+            查询首条数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.FirstOrDefault``1(System.String,System.Object[])">
+            <summary>
+            查询首条数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Fetch``1">
+            <summary>
+            数据查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Fetch``1(System.String,System.Object[])">
+            <summary>
+            数据查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>        
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Query``1(System.String,System.Object[])">
+            <summary>
+            数据查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Page``1(System.Int32,System.Int32,System.String,System.Object[])">
+            <summary>
+            获取分页数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pageIndex">第几页（从1开始）</param>
+            <param name="pageSize"></param>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Page``1(System.Int64,System.Int32,System.String,System.Object[])">
+            <summary>
+            获取分页数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="start">第几条数据(从1开始计数)</param>
+            <param name="pageSize"></param>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco.Db.Exist``1(System.Object)">
+            <summary>
+            实体是否存在
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="primaryKey"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

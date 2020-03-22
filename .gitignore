@@ -12,3 +12,14 @@
 /src/Captain.CO2NET/Properties/PublishProfiles
 /src/Captain.CO2NET.Json/bin/Debug/netstandard2.0
 /src/Captain.CO2NET.Json/obj
+/src/Captain.DB2NET.NPoco/bin
+/src/Captain.DB2NET.NPoco/obj
+/src/Captain.DB2NET.NPoco4Mysql/bin
+/src/Captain.DB2NET.NPoco4Mysql/obj
+/src/Captain.DB2NET.NPoco4Mysql.Tests/bin/Debug/netcoreapp3.1
+/src/Captain.DB2NET.NPoco4Mysql.Tests/obj
+/src/Captain.DB2NET.NPoco4SqlServer/bin
+/src/Captain.DB2NET.NPoco4SqlServer/obj
+/src/Captain.HttpClient/.vs/Captain.HttpClient
+/src/Captain.HttpClient/obj
+/src/Captain.HttpClient.Tests/obj

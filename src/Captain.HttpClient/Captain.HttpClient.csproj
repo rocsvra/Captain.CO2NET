@@ -5,15 +5,15 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>E:\Roc.GitHub\Captain.CO2NET\src\Captain.CO2NET.Api\Captain.CO2NET.Api.xml</DocumentationFile>
+    <DocumentationFile>.\Captain.HttpClient.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>E:\Roc.GitHub\Captain.CO2NET\src\Captain.CO2NET.Api\Captain.CO2NET.Api.xml</DocumentationFile>
+    <DocumentationFile>E:\Roc.GitHub\Captain.HttpClient\src\Captain.HttpClient\Captain.HttpClient.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Hellang.Middleware.ProblemDetails" Version="4.1.0" />
+    <PackageReference Include="RestSharp" Version="106.10.1" />
   </ItemGroup>
 
 </Project>

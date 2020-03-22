@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Captain.HttpClient</name>
+    </assembly>
+    <members>
+        <member name="T:Captain.HttpClient.Ext4RestResponse">
+            <summary>
+            RestResponse扩展
+            </summary>
+        </member>
+        <member name="T:Captain.HttpClient.HttpFile">
+            <summary>
+            Working with Files
+            </summary>
+        </member>
+        <member name="M:Captain.HttpClient.HttpFile.Download(System.String,System.String,System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="savePath">存储路径</param>
+            <param name="baseUrl">服务器地址</param>
+            <param name="resource">资源定位</param>
+        </member>
+        <member name="M:Captain.HttpClient.HttpFile.Download4LargeData(System.String,System.String,System.String)">
+            <summary>
+            下载文件(大文件)
+            </summary>
+            <param name="savePath">存储路径</param>
+            <param name="baseUrl">服务器地址</param>
+            <param name="resource">资源定位</param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.HttpClient.HttpFile.UploadFile(System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            文件上传
+            </summary>
+            <param name="files">文件键值对，值为文件路径</param>
+            <param name="baseUrl">服务器地址</param>
+            <param name="resource">资源定位</param>
+            <returns></returns>
+        </member>
+        <member name="T:Captain.HttpClient.HttpGet">
+            <summary>
+            HttpGet请求
+            </summary>
+        </member>
+        <member name="M:Captain.HttpClient.HttpGet.Execute(System.String,System.String)">
+            <summary>
+            执行Get请求
+            </summary>
+            <param name="baseUrl">服务器地址</param>
+            <param name="resource">资源定位</param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.HttpClient.HttpGet.Execute``1(System.String,System.String)">
+            <summary>
+            执行Get请求
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="baseUrl"></param>
+            <param name="resource"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Captain.HttpClient.HttpPost">
+            <summary>
+            HttpPost请求
+            </summary>
+        </member>
+        <member name="M:Captain.HttpClient.HttpPost.Execute(System.String,System.String,System.Object)">
+            <summary>
+            执行Post请求
+            </summary>
+            <param name="baseUrl">服务器地址</param>
+            <param name="resource">资源定位</param>
+            <param name="body">body参数体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.HttpClient.HttpPost.Execute``1(System.String,System.String,System.Object)">
+            <summary>
+            执行Post请求
+            </summary>
+            <param name="baseUrl">服务器地址</param>
+            <param name="resource">资源定位</param>
+            <param name="body">body参数体</param>
+            <returns></returns>
+        </member>
+        <member name="T:Captain.HttpClient.HttpsPost">
+            <summary>
+            执行Post请求
+            </summary>
+        </member>
+        <member name="M:Captain.HttpClient.HttpsPost.Execute``1(System.String,System.String,System.Object,System.String,System.Collections.Generic.List{System.Security.Cryptography.X509Certificates.X509Certificate},System.Text.Encoding)">
+            <summary>
+            方法：post
+            结果：T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="baseUrl">服务器地址</param>
+            <param name="resource">资源定位</param>
+            <param name="body">参数体</param>
+            <param name="contentType"></param>
+            <param name="certs">证书</param>
+            <param name="encoding">通讯数据字符串编码</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>roc</Authors>
+    <Company>roc</Company>
+    <Product>roc</Product>
+    <PackageProjectUrl>https://github.com/rocsvra/Captain.DB2NET</PackageProjectUrl>
+    <Description>基于NPoco的数据库操作类，数据库：SqlServer</Description>
+    <PackageTags>DB2NET,NPoco</PackageTags>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Roc.GitHub\Captain.DB2NET\src\Captain.DB2NET.NPoco4SqlServer\Captain.DB2NET.NPoco4SqlServer.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Roc.GitHub\Captain.DB2NET\src\Captain.DB2NET.NPoco4SqlServer\Captain.DB2NET.NPoco4SqlServer.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Captain.DB2NET.NPoco4SqlServer.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Captain.DB2NET.NPoco4SqlServer.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Captain.DB2NET.NPoco" Version="1.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
+  </ItemGroup>
+
+</Project>

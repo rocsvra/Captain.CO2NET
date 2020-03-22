@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Captain.DB2NET.NPoco4SqlServer</name>
+    </assembly>
+    <members>
+        <member name="M:Captain.DB2NET.NPoco4SqlServer.SqlServerDb.GetConnection(System.String)">
+            <summary>
+            获取数据库连接
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Captain.DB2NET.NPoco4SqlServer.SqlServerDb.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="connectionStringName"></param>
+        </member>
+    </members>
+</doc>
