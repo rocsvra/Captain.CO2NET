@@ -8,7 +8,7 @@
     <PackageProjectUrl>https://github.com/rocsvra/Captain.DB2NET</PackageProjectUrl>
     <Description>基于NPoco的数据库操作类，数据库：SqlServer</Description>
     <PackageTags>DB2NET,NPoco</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -29,7 +29,7 @@
 
   <ItemGroup>
     <PackageReference Include="Captain.DB2NET.NPoco" Version="1.0.1" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
   </ItemGroup>
 
 </Project>
