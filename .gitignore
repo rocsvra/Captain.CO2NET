@@ -25,3 +25,5 @@
 /src/Captain.HttpClient/.vs/Captain.HttpClient
 /src/Captain.HttpClient/obj
 /src/Captain.HttpClient.Tests/obj
+/src/Captain.CO2NET.AutoMapper/obj
+/src/Captain.CO2NET.AutoMapper/bin/Debug/netstandard2.0
