@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Captain.CO2NET.AutoMapper</name>
+    </assembly>
+    <members>
+        <member name="T:Captain.CO2NET.AutoMapper.Ext4AutoMapper">
+            <summary>
+            AutoMapper扩展类
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.AutoMapper.Ext4AutoMapper.Map``1(System.Object)">
+            <summary>
+             类型映射
+            </summary>
+        </member>
+        <member name="M:Captain.CO2NET.AutoMapper.Ext4AutoMapper.Map``1(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            集合列表类型映射
+            </summary>
+        </member>
+    </members>
+</doc>
