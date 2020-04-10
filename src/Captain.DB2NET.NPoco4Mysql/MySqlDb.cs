@@ -5,7 +5,10 @@ using System.Data.Common;
 
 namespace Captain.DB2NET.NPoco4Mysql
 {
-    public class MySqlDb : Db
+    /// <summary>
+    /// mysql
+    /// </summary>
+    public class MySqlDb : Db, IDb
     {
         private readonly string _connectionString;
 

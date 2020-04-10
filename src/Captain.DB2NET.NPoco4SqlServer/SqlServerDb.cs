@@ -7,7 +7,7 @@ namespace Captain.DB2NET.NPoco4SqlServer
     /// <summary>
     /// SqlServer
     /// </summary>
-    public class SqlServerDb : Db
+    public class SqlServerDb : Db, IDb
     {
         /// <summary>
         /// 获取数据库连接

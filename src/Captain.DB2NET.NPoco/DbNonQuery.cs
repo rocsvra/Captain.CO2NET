@@ -6,7 +6,7 @@ namespace Captain.DB2NET.NPoco
     /// <summary>
     /// NonQuery
     /// </summary>
-    public partial class Db
+    public partial class Db : IDb
     {
         /// <summary>
         /// 执行sql

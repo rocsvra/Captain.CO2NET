@@ -7,7 +7,7 @@ namespace Captain.DB2NET.NPoco
     /// <summary>
     /// Query
     /// </summary>
-    public partial class Db
+    public partial class Db : IDb
     {
         private DbConnection conn;
 
@@ -167,28 +167,6 @@ namespace Captain.DB2NET.NPoco
                 using (IDatabase db = new Database(conn))
                 {
                     return db.Page<T>(pageIndex, pageSize, sql, args);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 获取分页数据
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="start">第几条数据(从1开始计数)</param>
-        /// <param name="pageSize"></param>
-        /// <param name="sql"></param>
-        /// <param name="args"></param>
-        /// <returns></returns>
-        public Page<T> Page<T>(long start, int pageSize, string sql, params object[] args)
-        {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    long currentPage = start <= 0 ? 1 : (start - 1) / pageSize + 1;
-                    return db.Page<T>(currentPage, pageSize, sql, args);
                 }
             }
         }
