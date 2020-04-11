@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>roc</Authors>
+    <Company>roc</Company>
+    <Description>基于NPoco的数据库操作类</Description>
+    <PackageTags>DB2NET,NPoco</PackageTags>
+    <PackageProjectUrl>https://github.com/rocsvra/Captain.DB2NET</PackageProjectUrl>
+    <NeutralLanguage>.Net Standard</NeutralLanguage>
+    <Version>1.0.2</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Roc.GitHub\Captain.DB2NET\src\Captain.DB2NET.NPoco\Captain.DB2NET.NPoco.xml</DocumentationFile>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Roc.GitHub\Captain.DB2NET\src\Captain.DB2NET.NPoco\Captain.DB2NET.NPoco.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Captain.DB2NET.NPoco.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Captain.DB2NET.NPoco.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NPoco" Version="4.0.2" />
+  </ItemGroup>
+
+</Project>
