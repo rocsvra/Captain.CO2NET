@@ -29,8 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Captain.DB2NET.NPoco" Version="1.0.2" />
     <PackageReference Include="MySql.Data" Version="8.0.19" />
+    <PackageReference Include="NPoco" Version="4.0.2" />
   </ItemGroup>
 
 </Project>

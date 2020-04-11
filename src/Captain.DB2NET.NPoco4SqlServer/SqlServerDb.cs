@@ -1,4 +1,4 @@
-﻿using Captain.DB2NET.NPoco;
+﻿using NPoco;
 using System.Data.Common;
 using System.Data.SqlClient;
 
@@ -7,7 +7,7 @@ namespace Captain.DB2NET.NPoco4SqlServer
     /// <summary>
     /// SqlServer
     /// </summary>
-    public class SqlServerDb : Db, IDb
+    public class SqlServerDb : Database, IDatabase
     {
         /// <summary>
         /// 获取数据库连接

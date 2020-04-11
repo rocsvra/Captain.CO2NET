@@ -1,5 +1,5 @@
-﻿using Captain.DB2NET.NPoco;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using NPoco;
 using System.Data;
 using System.Data.Common;
 
@@ -8,7 +8,7 @@ namespace Captain.DB2NET.NPoco4Mysql
     /// <summary>
     /// mysql
     /// </summary>
-    public class MySqlDb : Db, IDb
+    public class MySqlDb : Database, IMySqlDb
     {
         private readonly string _connectionString;
 
