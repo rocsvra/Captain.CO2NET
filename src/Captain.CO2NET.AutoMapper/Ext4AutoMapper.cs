@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.Configuration;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Captain.CO2NET.AutoMapper
 {
@@ -19,20 +19,21 @@ namespace Captain.CO2NET.AutoMapper
             {
                 return default(T);
             }
-            var cfg = new MapperConfigurationExpression();
-            cfg.CreateMap(obj.GetType(), typeof(T));
-            Mapper.Initialize(cfg);
-            return Mapper.Map<T>(obj);
+            MapperConfigurationExpression experess = new MapperConfigurationExpression();
+            experess.CreateMap(obj.GetType(), typeof(T));
+            MapperConfiguration cfg = new MapperConfiguration(experess);
+            return new Mapper(cfg).Map<T>(obj);
         }
+
         /// <summary>
         /// 集合列表类型映射
         /// </summary>
         public static List<T> Map<T>(this IEnumerable<object> source)
         {
-            var cfg = new MapperConfigurationExpression();
-            cfg.CreateMap(source.First().GetType(), typeof(T));
-            Mapper.Initialize(cfg);
-            return Mapper.Map<List<T>>(source);
+            MapperConfigurationExpression experess = new MapperConfigurationExpression();
+            experess.CreateMap(source.First().GetType(), typeof(T));
+            MapperConfiguration cfg = new MapperConfiguration(experess);
+            return new Mapper(cfg).Map<List<T>>(source);
         }
     }
 }
