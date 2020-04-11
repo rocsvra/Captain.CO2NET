@@ -6,6 +6,8 @@
     <Description>AutoMapper扩展库</Description>
     <PackageProjectUrl>https://github.com/rocsvra/Captain.CO2NET</PackageProjectUrl>
     <NeutralLanguage>.Net Standard</NeutralLanguage>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
