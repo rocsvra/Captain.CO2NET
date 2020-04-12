@@ -16,10 +16,10 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public int Execute(string sql, params object[] args)
         {
-            using (conn)
+            using (Conn)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
+                Conn.Open();
+                using (IDatabase db = new Database(Conn))
                 {
                     return db.Execute(sql, args);
                 }
@@ -32,10 +32,10 @@ namespace Captain.DB2NET.NPoco
         /// <param name="sqls"></param>
         public void ExcuteBatch(List<string> sqls)
         {
-            using (conn)
+            using (Conn)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
+                Conn.Open();
+                using (IDatabase db = new Database(Conn))
                 {
                     db.BeginTransaction();
                     foreach (var sql in sqls)
@@ -44,7 +44,7 @@ namespace Captain.DB2NET.NPoco
                     }
                     db.CompleteTransaction();
                 }
-                conn.Close();
+                Conn.Close();
             }
         }
 
@@ -56,10 +56,10 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Insert<T>(T poco)
         {
-            using (conn)
+            using (Conn)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
+                Conn.Open();
+                using (IDatabase db = new Database(Conn))
                 {
                     return db.Insert<T>(poco);
                 }
@@ -73,10 +73,10 @@ namespace Captain.DB2NET.NPoco
         /// <param name="pocos"></param>
         public void InsertBulk<T>(IEnumerable<T> pocos)
         {
-            using (conn)
+            using (Conn)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
+                Conn.Open();
+                using (IDatabase db = new Database(Conn))
                 {
                     db.InsertBulk<T>(pocos);
                 }
@@ -90,10 +90,10 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Update(object poco)
         {
-            using (conn)
+            using (Conn)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
+                Conn.Open();
+                using (IDatabase db = new Database(Conn))
                 {
                     return db.Update(poco);
                 }
@@ -107,10 +107,10 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Delete(object poco)
         {
-            using (conn)
+            using (Conn)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
+                Conn.Open();
+                using (IDatabase db = new Database(Conn))
                 {
                     return db.Delete(poco);
                 }
@@ -125,10 +125,10 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Delete<T>(object pocoOrPrimaryKey)
         {
-            using (conn)
+            using (Conn)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
+                Conn.Open();
+                using (IDatabase db = new Database(Conn))
                 {
                     return db.Delete(pocoOrPrimaryKey);
                 }

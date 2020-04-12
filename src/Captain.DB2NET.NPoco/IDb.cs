@@ -8,6 +8,8 @@ namespace Captain.DB2NET.NPoco
     /// </summary>
     public interface IDb
     {
+
+
         /// <summary>
         /// 执行sql
         /// </summary>
