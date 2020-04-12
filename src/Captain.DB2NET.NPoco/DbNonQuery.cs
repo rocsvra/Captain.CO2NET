@@ -130,7 +130,7 @@ namespace Captain.DB2NET.NPoco
                 Conn.Open();
                 using (IDatabase db = new Database(Conn))
                 {
-                    return db.Delete(pocoOrPrimaryKey);
+                    return db.Delete<T>(pocoOrPrimaryKey);
                 }
             }
         }
