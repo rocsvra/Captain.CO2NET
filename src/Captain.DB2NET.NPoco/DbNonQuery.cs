@@ -1,12 +1,11 @@
-﻿using NPoco;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Captain.DB2NET.NPoco
 {
     /// <summary>
     /// NonQuery
     /// </summary>
-    public partial class Db
+    public partial class NPocoDb : INPocoDb
     {
         /// <summary>
         /// 执行sql
@@ -14,15 +13,11 @@ namespace Captain.DB2NET.NPoco
         /// <param name="sql"></param>
         /// <param name="args"></param>
         /// <returns></returns>
-        public int Execute(string sql, params object[] args)
+        public int ExecuteNonQuery(string sql, params object[] args)
         {
-            using (conn)
+            using (Db)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Execute(sql, args);
-                }
+                return Db.Execute(sql, args);
             }
         }
 
@@ -30,21 +25,16 @@ namespace Captain.DB2NET.NPoco
         /// 批量执行sql
         /// </summary>
         /// <param name="sqls"></param>
-        public void ExcuteBatch(List<string> sqls)
+        public void ExecuteNonQuery(IEnumerable<string> sqls)
         {
-            using (conn)
+            using (Db)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
+                Db.BeginTransaction();
+                foreach (var sql in sqls)
                 {
-                    db.BeginTransaction();
-                    foreach (var sql in sqls)
-                    {
-                        db.Execute(sql);
-                    }
-                    db.CompleteTransaction();
+                    Db.Execute(sql);
                 }
-                conn.Close();
+                Db.CompleteTransaction();
             }
         }
 
@@ -56,13 +46,22 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Insert<T>(T poco)
         {
-            using (conn)
+            using (Db)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Insert<T>(poco);
-                }
+                return Db.Insert<T>(poco);
+            }
+        }
+
+        /// <summary>
+        /// 插入(批量)
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="pocos"></param>
+        public void InsertBatch<T>(IEnumerable<T> pocos)
+        {
+            using (Db)
+            {
+                Db.InsertBatch<T>(pocos);
             }
         }
 
@@ -73,13 +72,9 @@ namespace Captain.DB2NET.NPoco
         /// <param name="pocos"></param>
         public void InsertBulk<T>(IEnumerable<T> pocos)
         {
-            using (conn)
+            using (Db)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    db.InsertBulk<T>(pocos);
-                }
+                Db.InsertBulk<T>(pocos);
             }
         }
 
@@ -90,13 +85,9 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Update(object poco)
         {
-            using (conn)
+            using (Db)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Update(poco);
-                }
+                return Db.Update(poco);
             }
         }
 
@@ -107,13 +98,9 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Delete(object poco)
         {
-            using (conn)
+            using (Db)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Delete(poco);
-                }
+                return Db.Delete(poco);
             }
         }
 
@@ -125,13 +112,9 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Delete<T>(object pocoOrPrimaryKey)
         {
-            using (conn)
+            using (Db)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Delete(pocoOrPrimaryKey);
-                }
+                return Db.Delete(pocoOrPrimaryKey);
             }
         }
     }

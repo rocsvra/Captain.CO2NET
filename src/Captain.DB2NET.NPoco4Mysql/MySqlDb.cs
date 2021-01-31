@@ -1,29 +1,21 @@
 ﻿using Captain.DB2NET.NPoco;
 using MySql.Data.MySqlClient;
 using System.Data;
-using System.Data.Common;
 
 namespace Captain.DB2NET.NPoco4Mysql
 {
-    public class MySqlDb : Db
+    /// <summary>
+    /// mysql 操作类
+    /// </summary>
+    public class MySqlDb : NPocoDb, IMySqlDb
     {
         private readonly string _connectionString;
-
-        /// <summary>
-        /// 获取数据库连接
-        /// </summary>
-        /// <param name="connectionString"></param>
-        /// <returns></returns>
-        public static DbConnection GetConnection(string connectionString)
-        {
-            return new MySqlConnection(connectionString);
-        }
 
         /// <summary>
         /// 构造函数
         /// </summary>
         /// <param name="connectionString">数据库连接串</param>
-        public MySqlDb(string connectionString) : base(GetConnection(connectionString))
+        public MySqlDb(string connectionString) : base(new MySqlConnection(connectionString))
         {
             _connectionString = connectionString;
         }

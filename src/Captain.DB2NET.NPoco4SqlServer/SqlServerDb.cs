@@ -4,6 +4,9 @@ using System.Data.SqlClient;
 
 namespace Captain.DB2NET.NPoco4SqlServer
 {
+    /// <summary>
+    /// sqlserver 操作类
+    /// </summary>
     public class SqlServerDb : Db
     {
         /// <summary>
@@ -19,7 +22,7 @@ namespace Captain.DB2NET.NPoco4SqlServer
         /// <summary>
         /// 构造函数
         /// </summary>
-        /// <param name="connectionStringName"></param>
+        /// <param name="connectionString"></param>
         public SqlServerDb(string connectionString) : base(GetConnection(connectionString)) { }
     }
 }

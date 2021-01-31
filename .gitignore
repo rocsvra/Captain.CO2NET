@@ -25,3 +25,5 @@
 /src/Captain.HttpClient/.vs/Captain.HttpClient
 /src/Captain.HttpClient/obj
 /src/Captain.HttpClient.Tests/obj
+/src/Captain.HttpClient/bin/Debug/netstandard2.0
+/src/Captain.HttpClient.Tests/bin/Debug/netcoreapp3.1
