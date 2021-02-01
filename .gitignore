@@ -27,3 +27,5 @@
 /src/Captain.HttpClient.Tests/obj
 /src/Captain.HttpClient/bin/Debug/netstandard2.0
 /src/Captain.HttpClient.Tests/bin/Debug/netcoreapp3.1
+/src/Captain.DB2NET.NPoco.Demo/obj
+/src/Captain.DB2NET.NPoco.Demo/appsettings.json
