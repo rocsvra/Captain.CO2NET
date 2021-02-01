@@ -5,7 +5,7 @@ using System.Data;
 namespace Captain.DB2NET.NPoco4Mysql
 {
     /// <summary>
-    /// MySql数据库操作类
+    /// MySql数据库操作
     /// </summary>
     public interface IMySqlDb : INPocoDb
     {

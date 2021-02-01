@@ -8,6 +8,8 @@ namespace Captain.DB2NET.NPoco
     /// </summary>
     public partial class NPocoDb
     {
+        private DbConnection conn;
+
         /// <summary>
         /// 查询单条数据
         /// </summary>
@@ -17,9 +19,13 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T SingleOrDefault<T>(string sql, params object[] args)
         {
-            using (Db)
+            using (conn)
             {
-                return Db.SingleOrDefault<T>(sql, args);
+                conn.Open();
+                using (IDatabase db = new Database(conn))
+                {
+                    return db.SingleOrDefault<T>(sql, args);
+                }
             }
         }
 
@@ -31,9 +37,13 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T SingleOrDefaultById<T>(object primaryKey)
         {
-            using (Db)
+            using (conn)
             {
-                return Db.SingleOrDefaultById<T>(primaryKey);
+                conn.Open();
+                using (IDatabase db = new Database(conn))
+                {
+                    return db.SingleOrDefaultById<T>(primaryKey);
+                }
             }
         }
 
@@ -46,9 +56,13 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T First<T>(string sql, params object[] args)
         {
-            using (Db)
+            using (conn)
             {
-                return Db.First<T>(sql, args);
+                conn.Open();
+                using (IDatabase db = new Database(conn))
+                {
+                    return db.First<T>(sql, args);
+                }
             }
         }
 
@@ -61,9 +75,13 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T FirstOrDefault<T>(string sql, params object[] args)
         {
-            using (Db)
+            using (conn)
             {
-                return Db.FirstOrDefault<T>(sql, args);
+                conn.Open();
+                using (IDatabase db = new Database(conn))
+                {
+                    return db.FirstOrDefault<T>(sql, args);
+                }
             }
         }
 
@@ -74,9 +92,13 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public List<T> Fetch<T>()
         {
-            using (Db)
+            using (conn)
             {
-                return Db.Fetch<T>();
+                conn.Open();
+                using (IDatabase db = new Database(conn))
+                {
+                    return db.Fetch<T>();
+                }
             }
         }
 
@@ -89,9 +111,13 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public List<T> Fetch<T>(string sql, params object[] args)
         {
-            using (Db)
+            using (conn)
             {
-                return Db.Fetch<T>(sql, args);
+                conn.Open();
+                using (IDatabase db = new Database(conn))
+                {
+                    return db.Fetch<T>(sql, args);
+                }
             }
         }
 
@@ -104,9 +130,13 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public IEnumerable<T> Query<T>(string sql, params object[] args)
         {
-            using (Db)
+            using (conn)
             {
-                return Db.Query<T>(sql, args);
+                conn.Open();
+                using (IDatabase db = new Database(conn))
+                {
+                    return db.Query<T>(sql, args);
+                }
             }
         }
 
@@ -121,9 +151,13 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public Page<T> Page<T>(int pageIndex, int pageSize, string sql, params object[] args)
         {
-            using (Db)
+            using (conn)
             {
-                return Db.Page<T>(pageIndex, pageSize, sql, args);
+                conn.Open();
+                using (IDatabase db = new Database(conn))
+                {
+                    return db.Page<T>(pageIndex, pageSize, sql, args);
+                }
             }
         }
 
@@ -135,9 +169,13 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public bool Exist<T>(object primaryKey)
         {
-            using (Db)
+            using (conn)
             {
-                return Db.Exists<T>(primaryKey);                
+                conn.Open();
+                using (IDatabase db = new Database(conn))
+                {
+                    return db.Exists<T>(primaryKey);
+                }
             }
         }
     }

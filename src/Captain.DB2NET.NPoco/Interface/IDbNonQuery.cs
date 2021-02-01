@@ -34,7 +34,7 @@ namespace Captain.DB2NET.NPoco
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="entities"></param>
-        void InsertBatch<T>(IEnumerable<T> entities);
+        int InsertBatch<T>(IEnumerable<T> entities);
 
         /// <summary>
         /// 插入(巨量)
@@ -48,14 +48,14 @@ namespace Captain.DB2NET.NPoco
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        object Update(object entity);
+        int Update(object entity);
 
         /// <summary>
         /// 删除实体
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        object Delete(object entity);
+        int Delete(object entity);
 
         /// <summary>
         /// 删除实体
@@ -63,6 +63,6 @@ namespace Captain.DB2NET.NPoco
         /// <typeparam name="T"></typeparam>
         /// <param name="id">主键</param>
         /// <returns></returns>
-        object Delete<T>(object id);
+        int Delete<T>(object id);
     }
 }
