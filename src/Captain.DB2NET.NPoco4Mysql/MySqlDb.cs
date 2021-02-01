@@ -1,5 +1,6 @@
 ﻿using Captain.DB2NET.NPoco;
 using MySql.Data.MySqlClient;
+using NPoco;
 using System.Data;
 
 namespace Captain.DB2NET.NPoco4Mysql
@@ -14,8 +15,9 @@ namespace Captain.DB2NET.NPoco4Mysql
         /// <summary>
         /// 构造函数
         /// </summary>
-        /// <param name="connectionString">数据库连接串</param>
-        public MySqlDb(string connectionString) : base(new MySqlConnection(connectionString))
+        /// <param name="connectionString"></param>
+        public MySqlDb(string connectionString)
+            : base(connectionString, DatabaseType.MySQL, MySqlClientFactory.Instance)
         {
             _connectionString = connectionString;
         }

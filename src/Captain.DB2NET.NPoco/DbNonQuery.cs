@@ -15,10 +15,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public int ExecuteNonQuery(string sql, params object[] args)
         {
-            using (Db)
-            {
-                return Db.Execute(sql, args);
-            }
+            return db.Execute(sql, args);
         }
 
         /// <summary>
@@ -27,15 +24,12 @@ namespace Captain.DB2NET.NPoco
         /// <param name="sqls"></param>
         public void ExecuteNonQuery(IEnumerable<string> sqls)
         {
-            using (Db)
+            db.BeginTransaction();
+            foreach (var sql in sqls)
             {
-                Db.BeginTransaction();
-                foreach (var sql in sqls)
-                {
-                    Db.Execute(sql);
-                }
-                Db.CompleteTransaction();
+                db.Execute(sql);
             }
+            db.CompleteTransaction();
         }
 
         /// <summary>
@@ -46,10 +40,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Insert<T>(T poco)
         {
-            using (Db)
-            {
-                return Db.Insert<T>(poco);
-            }
+            return db.Insert<T>(poco);
         }
 
         /// <summary>
@@ -57,12 +48,9 @@ namespace Captain.DB2NET.NPoco
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="pocos"></param>
-        public void InsertBatch<T>(IEnumerable<T> pocos)
+        public int InsertBatch<T>(IEnumerable<T> pocos)
         {
-            using (Db)
-            {
-                Db.InsertBatch<T>(pocos);
-            }
+            return db.InsertBatch<T>(pocos);
         }
 
         /// <summary>
@@ -72,10 +60,7 @@ namespace Captain.DB2NET.NPoco
         /// <param name="pocos"></param>
         public void InsertBulk<T>(IEnumerable<T> pocos)
         {
-            using (Db)
-            {
-                Db.InsertBulk<T>(pocos);
-            }
+            db.InsertBulk<T>(pocos);
         }
 
         /// <summary>
@@ -83,12 +68,9 @@ namespace Captain.DB2NET.NPoco
         /// </summary>
         /// <param name="poco"></param>
         /// <returns></returns>
-        public object Update(object poco)
+        public int Update(object poco)
         {
-            using (Db)
-            {
-                return Db.Update(poco);
-            }
+            return db.Update(poco);
         }
 
         /// <summary>
@@ -96,12 +78,9 @@ namespace Captain.DB2NET.NPoco
         /// </summary>
         /// <param name="poco"></param>
         /// <returns></returns>
-        public object Delete(object poco)
+        public int Delete(object poco)
         {
-            using (Db)
-            {
-                return Db.Delete(poco);
-            }
+            return db.Delete(poco);
         }
 
         /// <summary>
@@ -110,12 +89,9 @@ namespace Captain.DB2NET.NPoco
         /// <typeparam name="T"></typeparam>
         /// <param name="pocoOrPrimaryKey">实体或主键</param>
         /// <returns></returns>
-        public object Delete<T>(object pocoOrPrimaryKey)
+        public int Delete<T>(object pocoOrPrimaryKey)
         {
-            using (Db)
-            {
-                return Db.Delete(pocoOrPrimaryKey);
-            }
+            return db.Delete<T>(pocoOrPrimaryKey);
         }
     }
 }

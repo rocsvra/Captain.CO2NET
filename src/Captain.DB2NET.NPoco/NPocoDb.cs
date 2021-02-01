@@ -5,23 +5,33 @@ namespace Captain.DB2NET.NPoco
 {
     public partial class NPocoDb
     {
-        /// <summary>
-        /// 数据库连接
-        /// </summary>
-        public DbConnection Connection;
-
-        /// <summary>
-        /// 数据库
-        /// </summary>
-        public IDatabase Db => new Database(Connection);
+        private Database db;
 
         /// <summary>
         /// 构造函数
         /// </summary>
-        /// <param name="connection"></param>
-        public NPocoDb(DbConnection connection)
+        /// <param name="connectionString"></param>
+        /// <param name="databaseType"></param>
+        /// <param name="provider"></param>
+        public NPocoDb(string connectionString, DatabaseType databaseType, DbProviderFactory provider)
         {
-            Connection = connection;
+            db = new Database(connectionString, databaseType, provider);
+        }
+
+        /// <summary>
+        /// 开始事务
+        /// </summary>
+        public void BeginTransaction()
+        {
+            db.BeginTransaction();
+        }
+
+        /// <summary>
+        /// 结束事务
+        /// </summary>
+        public void CompleteTransaction()
+        {
+            db.CompleteTransaction();
         }
 
         /// <summary>
@@ -29,9 +39,10 @@ namespace Captain.DB2NET.NPoco
         /// </summary>
         public void Dispose()
         {
-            if (Db != null)
+            if (db != null)
             {
-                Db.Dispose();
+                db.KeepConnectionAlive = false;
+                db.CloseSharedConnection();
             }
         }
     }

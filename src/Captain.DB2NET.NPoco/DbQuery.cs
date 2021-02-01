@@ -17,10 +17,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T SingleOrDefault<T>(string sql, params object[] args)
         {
-            using (Db)
-            {
-                return Db.SingleOrDefault<T>(sql, args);
-            }
+            return db.SingleOrDefault<T>(sql, args);
         }
 
         /// <summary>
@@ -31,10 +28,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T SingleOrDefaultById<T>(object primaryKey)
         {
-            using (Db)
-            {
-                return Db.SingleOrDefaultById<T>(primaryKey);
-            }
+            return db.SingleOrDefaultById<T>(primaryKey);
         }
 
         /// <summary>
@@ -46,10 +40,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T First<T>(string sql, params object[] args)
         {
-            using (Db)
-            {
-                return Db.First<T>(sql, args);
-            }
+            return db.First<T>(sql, args);
         }
 
         /// <summary>
@@ -61,10 +52,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T FirstOrDefault<T>(string sql, params object[] args)
         {
-            using (Db)
-            {
-                return Db.FirstOrDefault<T>(sql, args);
-            }
+            return db.FirstOrDefault<T>(sql, args);
         }
 
         /// <summary>
@@ -74,10 +62,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public List<T> Fetch<T>()
         {
-            using (Db)
-            {
-                return Db.Fetch<T>();
-            }
+            return db.Fetch<T>();
         }
 
         /// <summary>
@@ -89,10 +74,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public List<T> Fetch<T>(string sql, params object[] args)
         {
-            using (Db)
-            {
-                return Db.Fetch<T>(sql, args);
-            }
+            return db.Fetch<T>(sql, args);
         }
 
         /// <summary>
@@ -104,10 +86,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public IEnumerable<T> Query<T>(string sql, params object[] args)
         {
-            using (Db)
-            {
-                return Db.Query<T>(sql, args);
-            }
+            return db.Query<T>(sql, args);
         }
 
         /// <summary>
@@ -121,10 +100,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public Page<T> Page<T>(int pageIndex, int pageSize, string sql, params object[] args)
         {
-            using (Db)
-            {
-                return Db.Page<T>(pageIndex, pageSize, sql, args);
-            }
+            return db.Page<T>(pageIndex, pageSize, sql, args);
         }
 
         /// <summary>
@@ -135,10 +111,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public bool Exist<T>(object primaryKey)
         {
-            using (Db)
-            {
-                return Db.Exists<T>(primaryKey);                
-            }
+            return db.Exists<T>(primaryKey);
         }
     }
 }
