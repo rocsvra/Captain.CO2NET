@@ -30,3 +30,5 @@
 /src/Captain.DB2NET.NPoco.Demo/bin/Debug/net5.0
 /src/Captain.DB2NET.NPoco.Demo/obj
 /src/Captain.DB2NET.NPoco.Demo/appsettings.json
+/src/Captain.CO2NET.AutoMapper/obj
+/src/Captain.CO2NET.AutoMapper
