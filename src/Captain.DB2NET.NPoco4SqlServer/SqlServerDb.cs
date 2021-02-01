@@ -12,8 +12,7 @@ namespace Captain.DB2NET.NPoco4SqlServer
         /// <summary>
         /// 构造函数
         /// </summary>
-        /// <param name="connectionString"></param>
-        public SqlServerDb(string connectionString)
-            : base(connectionString, new SqlServerDatabaseType(), SqlClientFactory.Instance) { }
+        /// <param name="connectionStringName"></param>
+        public SqlServerDb(string connectionString) : base(GetConnection(connectionString)) { }
     }
 }

@@ -8,7 +8,7 @@
     <PackageTags>DB2NET,NPoco</PackageTags>
     <PackageProjectUrl>https://github.com/rocsvra/Captain.DB2NET</PackageProjectUrl>
     <NeutralLanguage>.Net Standard</NeutralLanguage>
-    <Version>1.0.1</Version>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
