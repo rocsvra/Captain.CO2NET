@@ -34,8 +34,4 @@
     <PackageReference Include="NPoco" Version="5.1.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
-  </ItemGroup>
-
 </Project>
