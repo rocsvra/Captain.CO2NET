@@ -13,38 +13,23 @@ namespace Captain.DB2NET.NPoco
         /// <param name="sql"></param>
         /// <param name="args"></param>
         /// <returns></returns>
-        public int Execute(string sql, params object[] args)
+        public int ExecuteNonQuery(string sql, params object[] args)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Execute(sql, args);
-                }
-            }
+            return db.Execute(sql, args);
         }
 
         /// <summary>
         /// 批量执行sql
         /// </summary>
         /// <param name="sqls"></param>
-        public void ExcuteBatch(List<string> sqls)
+        public void ExecuteNonQuery(IEnumerable<string> sqls)
         {
-            using (conn)
+            db.BeginTransaction();
+            foreach (var sql in sqls)
             {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    db.BeginTransaction();
-                    foreach (var sql in sqls)
-                    {
-                        db.Execute(sql);
-                    }
-                    db.CompleteTransaction();
-                }
-                conn.Close();
+                db.Execute(sql);
             }
+            db.CompleteTransaction();
         }
 
         /// <summary>
@@ -55,31 +40,28 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public object Insert<T>(T poco)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Insert<T>(poco);
-                }
-            }
+            return db.Insert(poco);
         }
 
         /// <summary>
-        /// 巨量插入
+        /// 插入(批量)
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="pocos"></param>
+        /// <returns></returns>
+        public int InsertBatch<T>(IEnumerable<T> pocos)
+        {
+            return db.InsertBatch(pocos);
+        }
+
+        /// <summary>
+        /// 插入(巨量)
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="pocos"></param>
         public void InsertBulk<T>(IEnumerable<T> pocos)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    db.InsertBulk<T>(pocos);
-                }
-            }
+            db.InsertBulk(pocos);
         }
 
         /// <summary>
@@ -89,14 +71,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public int Update(object poco)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Update(poco);
-                }
-            }
+            return db.Update(poco);
         }
 
         /// <summary>
@@ -106,14 +81,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public int Delete(object poco)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Delete(poco);
-                }
-            }
+            return db.Delete(poco);
         }
 
         /// <summary>
@@ -124,14 +92,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public int Delete<T>(object pocoOrPrimaryKey)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Delete(pocoOrPrimaryKey);
-                }
-            }
+            return db.Delete<T>(pocoOrPrimaryKey);
         }
     }
 }

@@ -8,7 +8,16 @@ namespace Captain.DB2NET.NPoco
     /// </summary>
     public partial class NPocoDb
     {
-        private DbConnection conn;
+        /// <summary>
+        /// 实体是否存在
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="primaryKey"></param>
+        /// <returns></returns>
+        public bool Exist<T>(object primaryKey)
+        {
+            return db.Exists<T>(primaryKey);
+        }
 
         /// <summary>
         /// 查询单条数据
@@ -19,14 +28,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T SingleOrDefault<T>(string sql, params object[] args)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.SingleOrDefault<T>(sql, args);
-                }
-            }
+            return db.SingleOrDefault<T>(sql, args);
         }
 
         /// <summary>
@@ -37,14 +39,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T SingleOrDefaultById<T>(object primaryKey)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.SingleOrDefaultById<T>(primaryKey);
-                }
-            }
+            return db.SingleOrDefaultById<T>(primaryKey);
         }
 
         /// <summary>
@@ -56,14 +51,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T First<T>(string sql, params object[] args)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.First<T>(sql, args);
-                }
-            }
+            return db.First<T>(sql, args);
         }
 
         /// <summary>
@@ -75,14 +63,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public T FirstOrDefault<T>(string sql, params object[] args)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.FirstOrDefault<T>(sql, args);
-                }
-            }
+            return db.FirstOrDefault<T>(sql, args);
         }
 
         /// <summary>
@@ -92,14 +73,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public List<T> Fetch<T>()
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Fetch<T>();
-                }
-            }
+            return db.Fetch<T>();
         }
 
         /// <summary>
@@ -111,14 +85,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public List<T> Fetch<T>(string sql, params object[] args)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Fetch<T>(sql, args);
-                }
-            }
+            return db.Fetch<T>(sql, args);
         }
 
         /// <summary>
@@ -130,14 +97,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public IEnumerable<T> Query<T>(string sql, params object[] args)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Query<T>(sql, args);
-                }
-            }
+            return db.Query<T>(sql, args);
         }
 
         /// <summary>
@@ -151,32 +111,7 @@ namespace Captain.DB2NET.NPoco
         /// <returns></returns>
         public Page<T> Page<T>(int pageIndex, int pageSize, string sql, params object[] args)
         {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Page<T>(pageIndex, pageSize, sql, args);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 实体是否存在
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="primaryKey"></param>
-        /// <returns></returns>
-        public bool Exist<T>(object primaryKey)
-        {
-            using (conn)
-            {
-                conn.Open();
-                using (IDatabase db = new Database(conn))
-                {
-                    return db.Exists<T>(primaryKey);
-                }
-            }
+            return db.Page<T>(pageIndex, pageSize, sql, args);
         }
     }
 }
