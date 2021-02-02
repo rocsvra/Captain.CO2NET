@@ -32,3 +32,4 @@
 /src/Captain.DB2NET.NPoco.Demo/appsettings.json
 /src/Captain.CO2NET.AutoMapper/obj
 /src/Captain.CO2NET.AutoMapper
+*.user
